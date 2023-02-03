@@ -11,11 +11,3 @@
   display: grid;
   grid-template-columns: 12rem auto;
 }
-
-.bucket div {
-  margin: 5px;
-  background-color: var(--dark);
-  color: var(--light);
-  padding: 1em;
-  border-radius: 5px;
-}

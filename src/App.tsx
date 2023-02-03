@@ -1,6 +1,7 @@
-import { DndContext, useDraggable } from "@dnd-kit/core";
+import { DndContext } from "@dnd-kit/core";
 import {} from "@jsonforms/vanilla-renderers";
 import "./App.css";
+import Draggable from "./Draggable";
 
 function App() {
   const controls = [
@@ -8,19 +9,15 @@ function App() {
     "Artifact",
     "Vertical Layout",
     "Horizontal Layout",
+    "Tabbed Section",
   ];
   return (
     <div className="App">
       <DndContext>
         <div className="bucket">
-          {controls.map((name) => {
-            const { setNodeRef } = useDraggable({ id: name });
-            return (
-              <div ref={setNodeRef}>
-                <code>{name}</code>
-              </div>
-            );
-          })}
+          {controls.map((name) => (
+            <Draggable name={name} />
+          ))}
         </div>
         <div className="form"></div>
       </DndContext>

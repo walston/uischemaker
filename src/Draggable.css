@@ -1,0 +1,7 @@
+.Draggable {
+  margin: 5px;
+  background-color: var(--dark);
+  color: var(--light);
+  padding: 1em;
+  border-radius: 5px;
+}
